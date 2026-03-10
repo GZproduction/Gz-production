@@ -11,7 +11,6 @@ const portfolio = [
     date: "12 mars 2025",
     location: "Lisbonne, Portugal",
     cover: "media/Cover_Cedric.jpg",
-    videoMp4: "media/Cedric_vs_Benfica.mp4",
     links: {
       instagram: "https://www.instagram.com/p/DOGsNeHCJhI/",
     },
@@ -25,7 +24,6 @@ const portfolio = [
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
     cover: "media/Cover_Pedro.jpg",
-    videoMp4: "media/Pinto_vs_Meux.mp4",
   },
   {
     title: "Bilal Bafdili vs KAA Gent – Highlights",
@@ -36,7 +34,9 @@ const portfolio = [
     date: "12 mars 2025",
     location: "Mechelen, Belgique",
     cover: "media/Cover_Bilal.jpg",
-    videoMp4: "media/Bilal_vs_Gand.mp4",
+    links: {
+      instagram : "https://www.instagram.com/p/DNiqlg8M87S/",
+    }
   },
   {
     title: "Zaid Bafdili signature SCP",
@@ -47,7 +47,9 @@ const portfolio = [
     date: "12 mars 2025",
     location: "Lisbonne, Portugal",
     cover: "media/Zaid_Signature.jpg",
-    videoMp4: "media/Zaid_signature.mp4",
+    links: {
+      instagram : "https://www.instagram.com/p/DM5TwtQqu-s/",
+    }
   },
   {
     title: "Zaid Bafdili Training",
@@ -57,8 +59,10 @@ const portfolio = [
     year: 2025,
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
-    cover: "media/ZaidTraining.jpg",
-    videoMp4: "media/Zaid_Training.mp4",
+    cover: "media/ZaidTraining.png",
+    links: {
+      instagram : "https://www.instagram.com/p/DL-mn-yM3B0/",
+    }
   },
   {
     title: "Dalil Bafdili Training",
@@ -68,19 +72,46 @@ const portfolio = [
     year: 2025,
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
-    cover: "media/DalilTraining.jpg",
-    videoMp4: "media/Dalil_entrainement.mp4",
+    cover: "media/DalilTraining.png",
   },
   {
-    title: "Saijo - Patrick Bruel (Clip officiel)",
+    title: "Saijo - Patrick Bruel",
     type: "Musique",
     clients: ["Saijo"],
     production: ["Jonathan Weyssow, Saijo"],
     year: 2025,
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
-    cover: "media/saijoPatrick.jpg",
-    videoMp4: "media/Saijo_patrick_bruel.mp4",
+    cover: "media/saijoPatrick.png",
+    links: {
+      youtube : "https://www.youtube.com/watch?v=kw-MbgTrac8",
+    }
+  },
+  {
+    title: "Saijo - Maman m'a dit",
+    type: "Musique",
+    clients: ["Saijo"],
+    production: ["Jonathan Weyssow, Saijo"],
+    year: 2025,
+    date: "12 mars 2025",
+    location: "Bruxelles, Belgique",
+    cover: "media/saijo_maman.jpeg",
+    links: {
+      youtube : "https://www.youtube.com/watch?v=I1fl9JVkOE8",
+    }
+  },
+  {
+    title: "Saijo - R.I.P KOBE",
+    type: "Musique",
+    clients: ["Saijo"],
+    production: ["Jonathan Weyssow, Saijo"],
+    year: 2025,
+    date: "12 mars 2025",
+    location: "Bruxelles, Belgique",
+    cover: "media/saijo_rip.jpeg",
+    links: {
+      youtube : "https://www.youtube.com/watch?v=H_Ar6di0-Pg",
+    }
   },
 ];
 
@@ -213,7 +244,7 @@ const Modal = ({ open, onClose, project }) => {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-600 hover:border-white text-sm"
                   >
-                    <img src="/media/instagram.png" alt="Instagram" className="w-4 h-4" />
+                    <img src="media/instagram.png" alt="Instagram" className="w-4 h-4" />
                   </a>
                 )}
                 {project.links?.youtube && (
@@ -326,7 +357,7 @@ ${message}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center">
-            <img src="/media/logo.jpg" alt="Logo GZProduction" className="h-10 w-auto" />
+            <img src="media/logo.jpg" alt="Logo GZProduction" className="h-10 w-auto" />
             <div className="leading-tight">
               <div className="font-semibold tracking-wider uppercase text-xs">GzProduction</div>
               <div className="text-[11px] text-neutral-500 tracking-wide uppercase">Sport & Musique</div>
@@ -440,9 +471,7 @@ ${message}
                 )}
               </div>
 
-
             </div>
-
             {/* === BLOC MILIEU : réseaux === */}
             <div className="flex items-center gap-3">
               {/* Instagram */}
@@ -458,7 +487,7 @@ ${message}
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-8 h-8 rounded border border-neutral-600 hover:border-white"
               >
-                <img src="/media/instagram.png" alt="Instagram" className="w-6 h-6" />
+                <img src="media/instagram.png" alt="Instagram" className="w-6 h-6" />
               </a>
 
               {/* Contact */}
@@ -477,64 +506,9 @@ ${message}
             <span className="block w-6 h-0.5 bg-white mb-1" />
             <span className="block w-6 h-0.5 bg-white" />
           </button>
+          
         </div>
-
-        {/* Menu mobile simple */}
-        {menuOpen && (
-          <div className="md:hidden border-t border-neutral-800 bg-neutral-900/95">
-            <div className="px-4 py-3 grid gap-2 text-sm">
-              <button
-                onClick={() => {
-                  setTypeFilter("All");
-                  setClientFilter("All");
-                  setYearFilter("All");
-                  setMenuOpen(false);
-                }}
-              >
-                All
-              </button>
-              <button
-                onClick={() => {
-                  setTypeFilter("Sport");
-                  setClientFilter("All");
-                  setMenuOpen(false);
-                }}
-              >
-                Sport
-              </button>
-              <button
-                onClick={() => {
-                  setTypeFilter("Musique");
-                  setClientFilter("All");
-                  setMenuOpen(false);
-                }}
-              >
-                Musique
-              </button>
-              <button
-                onClick={() => {
-                  setMenuOpen(false);
-                  setSearchOpen((v) => !v);
-                }}
-              >
-                Recherche
-              </button>
-              <a href="#about" onClick={() => setMenuOpen(false)}>
-                About
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setMenuOpen(false)}
-                className="mt-1 inline-flex items-center justify-center border rounded-full px-3 py-2"
-              >
-                Devis
-              </a>
-            </div>
-          </div>
-        )}
       </header>
-
-
 
       {/* ===== Portfolio (formats natifs, pas de stretch) ===== */}
       <section id="portfolio" className="py-16">
@@ -643,9 +617,6 @@ ${message}
 
         </div>
       </section>
-
-
-
 
       {/* ===== About + Contact ===== */}
       <section id="about" className="py-16">
