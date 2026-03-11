@@ -23,7 +23,7 @@ const portfolio = [
     year: 2025,
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
-    cover: "media/Cover_Pedro.jpg",
+    cover: "media/Pedro_Pinto.jpeg",
   },
   {
     title: "Bilal Bafdili vs KAA Gent – Highlights",
@@ -33,7 +33,7 @@ const portfolio = [
     year: 2025,
     date: "12 mars 2025",
     location: "Mechelen, Belgique",
-    cover: "media/Cover_Bilal.jpg",
+    cover: "media/Bilal_1.jpeg",
     links: {
       instagram : "https://www.instagram.com/p/DNiqlg8M87S/",
     }
@@ -46,7 +46,7 @@ const portfolio = [
     year: 2025,
     date: "12 mars 2025",
     location: "Lisbonne, Portugal",
-    cover: "media/Zaid_Signature.jpg",
+    cover: "media/Zaid1.jpeg",
     links: {
       instagram : "https://www.instagram.com/p/DM5TwtQqu-s/",
     }
@@ -73,6 +73,19 @@ const portfolio = [
     date: "12 mars 2025",
     location: "Bruxelles, Belgique",
     cover: "media/DalilTraining.png",
+  },
+  {
+    title: "Saijo - Briquet",
+    type: "Musique",
+    clients: ["Saijo"],
+    production: ["Jonathan Weyssow, Saijo"],
+    year: 2026,
+    date: "12 mars 2026",
+    location: "Bruxelles, Belgique",
+    cover: "media/saijo_Briquet.jpeg",
+    links: {
+      youtube : "https://youtu.be/IlnzjrPHQFA?si=f5gRon9BzGb1Vm6L",
+    }
   },
   {
     title: "Saijo - Patrick Bruel",
